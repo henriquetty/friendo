@@ -1,0 +1,44 @@
+div.form {
+  max-width: 500px;
+  margin: 0 auto;
+  border: 1px solid black;
+}
+
+legend {
+  text-align: center;
+  padding: 25px;
+  font-size: 2rem;
+}
+
+fieldset {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 5px;
+}
+
+.group {
+  min-width: 50%;
+  display: flex;
+  flex-direction: column;
+  padding: 5px 0px 5px 0px;
+}
+
+.group input,
+select {
+  padding: 7px;
+}
+
+.last-padding {
+  padding-bottom: 25px;
+}
+
+.button-center {
+  text-align: center;
+}
+
+.button {
+  width: 50%;
+  padding: 10px;
+}
