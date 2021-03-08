@@ -1,6 +1,9 @@
+require("dotenv").config();
+
 const path = require("path");
 const express = require("express");
 const routes = require("./routes");
+const session = require("express-session");
 
 const app = express();
 
@@ -9,8 +12,20 @@ app.use(express.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "/views"));
 
+app.use(
+  session({
+    name: "friendsapp",
+    secret: process.env.SECRET,
+    resave: false,
+    saveUninitialized: false,
+    cookie: {
+      maxAge: 28800000,
+    },
+  })
+);
+
 app.use("/", routes);
 
-app.listen(3333, () => {
-  console.log("Listening on 3333");
+app.listen(process.env.PORT || 3333, () => {
+  console.log(`Listening on ${process.env.PORT || 3333}`);
 });
