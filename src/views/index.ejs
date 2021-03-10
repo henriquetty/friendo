@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Homepage</title>
+    <title>Friendo - Make new Friends</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -12,11 +12,11 @@
     />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
-  <body>
+  <body class="waves">
     <header>
       <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
         <div class="container">
-          <a class="navbar-brand" href="/">FriendsAPP</a>
+          <a class="navbar-brand" href="/">Friendo</a>
           <button
             class="navbar-toggler"
             type="button"
@@ -37,7 +37,7 @@
                 <a class="nav-link" href="/users">Users</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
+                <a class="nav-link disabled" href="#">About</a>
               </li>
             </ul>
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
@@ -87,7 +87,10 @@
                         />
                       </div>
                       <div class="d-flex justify-content-center mb-3">
-                        <button type="submit" class="btn btn-primary">
+                        <button
+                          type="submit"
+                          class="btn btn-primary loginPopupButton"
+                        >
                           Log in
                         </button>
                       </div>
@@ -108,13 +111,23 @@
     </header>
     <main>
       <div class="container">
-        <div>
-          <div class="text-center">
-            <h1
-              class="border-bottom d-inline-block text-success text-uppercase fs-3 my-4"
-            >
-              Welcome to FriendsAPP
-            </h1>
+        <div class="row">
+          <div
+            class="w-100 col-12 col-sm-10 col-md-10 col-lg-10 col-xl-10 d-flex justify-content-center justify-content-sm-end"
+          >
+            <div class="pt-5 w-50">
+              <h1 class="text-center">
+                Welcome to,
+                <span class="d-block pt-2 text-success"
+                  >Friendo<span class="text-dark">.</span></span
+                >
+              </h1>
+              <div class="text-center mt-4">
+                <a class="btn btn-primary registerbutton" href="/register"
+                  >Create an account</a
+                >
+              </div>
+            </div>
           </div>
         </div>
       </div>

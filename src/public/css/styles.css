@@ -1,7 +1,23 @@
-/* fix position and size of login form on navbar */
+html,
+body.waves {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background: #dce1e3;
+}
+
+body.waves {
+  background-image: url("../img/undraw_true_friends_c94g.svg"),
+    url("../img/wave.svg");
+  background-position: center left, bottom center;
+  background-repeat: no-repeat, repeat-x;
+  background-size: 50%, auto;
+}
 
 ul.dropdown-menu.show {
-  border: 1px solid #7eb3f2;
+  border: 1px solid #5ebbf3;
   width: 330px;
   left: -240px;
 }
@@ -17,14 +33,50 @@ ul.dropdown-menu.show {
   box-shadow: 2px 3px 6px 1px rgb(179, 174, 174);
 }
 
-button.btn.btn-primary {
+/* website buttons */
+
+button.btn.btn-primary.loginPopupButton {
   background-color: #5ebbf3;
   border: none;
   border-radius: 13px;
   width: 36%;
   padding: 9px;
+  box-shadow: 2px 3px 8px 1px rgb(179, 174, 174);
 }
 
-button.btn.btn-primary:hover {
+a.btn.btn-primary.registerbutton,
+button.btn.btn-primary.w-100.registerButton {
+  background-color: #5ebbf3;
+  border: none;
+  border-radius: 13px;
+  padding: 9px;
+  box-shadow: 2px 3px 8px 1px rgb(179, 174, 174);
+}
+
+button.btn.btn-primary:hover,
+a.btn.btn-primary.registerbutton:hover,
+button.btn.btn-primary.w-100.registerButton:hover {
   box-shadow: 2px 6px 10px 1px rgb(179, 174, 174);
+}
+
+@media (max-width: 991.98px) {
+  body#index {
+    background-size: 60%, 140%;
+  }
+}
+
+@media (max-width: 767.98px) {
+  body#index {
+    background-size: 70%, 180%;
+  }
+}
+
+@media (max-width: 575.98px) {
+  body#index {
+    background-position: center, bottom;
+    background-size: 100%, 200%;
+  }
+  div.pt-5.w-50 {
+    width: 75% !important;
+  }
 }

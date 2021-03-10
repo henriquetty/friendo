@@ -12,6 +12,7 @@ class RegisterModel {
       gender,
     } = data;
 
+    //bcrypt needed
     let sql = `INSERT INTO user_account (first_name, last_name, email, password, age, gender)
     VALUES ('${fname}', '${lname}', '${email}', '${password}', '${birthdate}', '${gender}')`;
 

@@ -10,12 +10,13 @@
       integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
     <header>
       <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
         <div class="container">
-          <a class="navbar-brand" href="/">FriendsAPP</a>
+          <a class="navbar-brand" href="/">Friendo</a>
           <button
             class="navbar-toggler"
             type="button"
@@ -36,7 +37,7 @@
                 <a class="nav-link" href="/users">Users</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
+                <a class="nav-link disabled" href="#">About</a>
               </li>
             </ul>
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
@@ -76,7 +77,10 @@
                   required
                 />
               </div>
-              <button type="submit" class="btn btn-primary w-100">
+              <button
+                type="submit"
+                class="btn btn-primary w-100 registerButton"
+              >
                 Sign in
               </button>
             </form>
