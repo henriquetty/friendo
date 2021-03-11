@@ -6,11 +6,11 @@ module.exports = {
   },
   register: function (req, res) {
     RegisterModel.register(req.body, (error, response) => {
-      if (!error) {
-        res.redirect("/?regsuccess=1");
-      } else {
-        res.redirect("/register?error=1");
+      if (error) {
+        return res.redirect("/?regsuccess=2");
       }
+
+      res.redirect("/?regsuccess=1");
     });
   },
 };
