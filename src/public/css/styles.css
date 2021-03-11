@@ -1,14 +1,14 @@
-html,
-body.waves {
-  height: 100%;
-  width: 100%;
-}
-
 body {
   background: #dce1e3;
 }
 
-body.waves {
+html.html100 {
+  height: 100%;
+  width: 100%;
+}
+
+/* homepage waves/background */
+body#waves {
   background-image: url("../img/undraw_true_friends_c94g.svg"),
     url("../img/wave.svg");
   background-position: center left, bottom center;
@@ -16,13 +16,14 @@ body.waves {
   background-size: 50%, auto;
 }
 
+/* css override login form */
+
 ul.dropdown-menu.show {
   border: 1px solid #5ebbf3;
   width: 330px;
   left: -240px;
 }
 
-/* css override login form */
 #dropdownEmail,
 #dropdownPassword {
   box-shadow: 1px 1px 3px 1px rgb(179, 174, 174);
@@ -34,7 +35,6 @@ ul.dropdown-menu.show {
 }
 
 /* website buttons */
-
 button.btn.btn-primary.loginPopupButton {
   background-color: #5ebbf3;
   border: none;
@@ -59,24 +59,68 @@ button.btn.btn-primary.w-100.registerButton:hover {
   box-shadow: 2px 6px 10px 1px rgb(179, 174, 174);
 }
 
+/* homepage */
 @media (max-width: 991.98px) {
-  body#index {
+  body#waves {
     background-size: 60%, 140%;
   }
 }
 
 @media (max-width: 767.98px) {
-  body#index {
+  body#waves {
     background-size: 70%, 180%;
   }
 }
 
 @media (max-width: 575.98px) {
-  body#index {
-    background-position: center, bottom;
-    background-size: 100%, 200%;
+  body#waves {
+    background-position: center bottom, bottom;
+    background-size: 90%, 200%;
   }
   div.pt-5.w-50 {
     width: 75% !important;
   }
+}
+
+/* login */
+body#loginWaves {
+  background-image: url("../img/undraw_true_friends_c94g.svg"),
+    url("../img/wave.svg");
+  background-position: left, bottom center;
+  background-repeat: no-repeat, repeat-x;
+  background-size: 40%, auto;
+}
+
+@media (max-width: 991.98px) {
+  body#loginWaves {
+    background-size: 30%, 140%;
+  }
+}
+
+@media (max-width: 767.98px) {
+  body#loginWaves {
+    background-size: 70%, 180%;
+    background-position: bottom, bottom center;
+  }
+}
+
+@media (max-width: 575.98px) {
+  body#loginWaves {
+    background-position: center bottom, bottom;
+    background-size: 110%, 200%;
+  }
+}
+
+/* form-style  */
+.form-style {
+  background-color: white;
+  padding: 20px;
+}
+
+body#registerWaves {
+  background-image: url("../img/undraw_true_friends_c94g.svg"),
+    url("../img/wave.svg");
+  background-position: left, bottom center;
+  background-repeat: no-repeat, repeat-x;
+  background-size: 40%, auto;
 }
