@@ -14,7 +14,7 @@ app.set("views", path.join(__dirname, "/views"));
 
 app.use(
   session({
-    name: "friendsapp",
+    name: "friendo",
     secret: process.env.SECRET,
     resave: false,
     saveUninitialized: false,
