@@ -1,20 +1,27 @@
-const searchArea = document.querySelector(
-  "#navbarSupportedContent > ul:nth-child(1) > li:nth-child(2)"
-);
-const body = document.querySelector("body");
+if (!(window.innerWidth <= 575)) {
+  const searchArea = document.querySelector(
+    "#navbarSupportedContent > ul:nth-child(1) > li:nth-child(2)"
+  );
 
-searchArea.addEventListener("mouseenter", (e) => {
-  let divAlert = document.createElement("div");
-  let textAlert = document.createElement("span");
-  divAlert.className = "alertPopup";
-  textAlert.innerText = "Hello World";
-  divAlert.appendChild(textAlert);
+  let alertPopup = document.querySelector("div.alertPopup");
+  let textPopup = document.querySelector("span.textPopup");
 
-  body.appendChild(divAlert);
+  searchArea.addEventListener("mouseenter", () => {
+    let saW, saL, saB;
 
-  console.log(e);
-});
+    saW = searchArea.getBoundingClientRect().width;
+    saL = searchArea.getBoundingClientRect().left;
+    saT = searchArea.getBoundingClientRect().top;
 
-searchArea.addEventListener("mouseleave", () => {
-  console.log("Mouse saiu");
-});
+    alertPopup.style.visibility = "visible";
+    alertPopup.style.top = `${saT * 9}px`;
+    alertPopup.style.left = `${saL + saW / 2 - 100}px`;
+    textPopup.innerText = "Log in to search!";
+  });
+
+  searchArea.addEventListener("mouseleave", () => {
+    alertPopup.style.visibility = "hidden";
+    alertPopup.style.top = `-9999px`;
+    alertPopup.style.left = `-9999px`;
+  });
+}
