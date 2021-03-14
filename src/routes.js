@@ -10,6 +10,7 @@ router.get("/", indexController.render);
 router.get("/search", searchController.render);
 router.get("/register", registerController.render);
 router.post("/register", registerController.register);
-router.get("/login", loginController.login);
+router.get("/login", loginController.render);
+router.post("/login", loginController.login);
 
 module.exports = router;
