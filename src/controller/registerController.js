@@ -1,16 +1,31 @@
 const RegisterModel = require("../model/RegisterModel");
 
 module.exports = {
-  render: function (req, res) {
-    res.render("register", { success: 1 });
+  render: async function (req, res) {
+    res.render("register");
   },
-  register: function (req, res) {
-    RegisterModel.register(req.body, (error, response) => {
-      if (error) {
-        return res.redirect("/?regsuccess=2");
-      }
+  register: async function (req, res) {
+    let email, isEmailRegistered;
 
-      res.redirect("/?regsuccess=1");
+    email = req.body.email;
+
+    //to fix
+    const emailsRegistered = (callback) => {
+      RegisterModel.verifyEmailAvailable(email, (results) => {
+        return callback(results.length);
+      });
+    };
+
+    testUserEmail((i) => {
+      console.log(i);
+    });
+
+    // RegisterModel.register(req.body, (error, results, fields) => {
+    //   console.log(results.affectedRows);
+    // });
+
+    res.json({
+      ok: "ok",
     });
   },
 };
