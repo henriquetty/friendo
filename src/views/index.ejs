@@ -37,7 +37,7 @@
                 <a class="nav-link disabled" href="/search">Search</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link disabled" href="#">About</a>
+                <a class="nav-link disabled" href="#">Contact</a>
               </li>
             </ul>
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
@@ -61,41 +61,34 @@
                   <li>
                     <form class="px-3 py-3" action="/login" method="POST">
                       <div class="mb-3 text-center">
-                        <label for="dropdownEmail" class="form-label"
-                          >Email address</label
-                        >
+                        <label for="dropdownEmail" class="form-label">Email address</label>
                         <input
                           type="email"
                           class="form-control rounded-pill"
                           id="dropdownEmail"
                           name="email"
+                          required
                           placeholder="email@example.com"
                         />
                       </div>
                       <div class="mb-3 text-center">
-                        <label for="dropdownPassword" class="form-label"
-                          >Password</label
-                        >
+                        <label for="dropdownPassword" class="form-label">Password</label>
                         <input
                           type="password"
                           class="form-control rounded-pill"
                           id="dropdownPassword"
                           name="password"
+                          required
                           placeholder="password"
                         />
                       </div>
                       <div class="d-flex justify-content-center mb-3">
-                        <button
-                          type="submit"
-                          class="btn btn-primary loginPopupButton"
-                        >
+                        <button type="submit" class="btn btn-primary loginPopupButton">
                           Log in
                         </button>
                       </div>
                       <div class="text-center">
-                        <span class="mb-1 d-block text-break"
-                          >Don't have an account?</span
-                        >
+                        <span class="mb-1 d-block text-break">Don't have an account?</span>
                         <a class="" href="/register">You can sign up instead</a>
                       </div>
                     </form>
@@ -125,16 +118,13 @@
               </h1>
               <div class="text-center">
                 <p class="text-dark text-break text-wrap">
-                  Dolor esse enim laborum pariatur cupidatat mollit anim. Do
-                  nulla fugiat esse dolore enim reprehenderit cillum magna sunt
-                  voluptate non aliqua enim amet. Esse aliquip excepteur ullamco
-                  est ut eu cupidatat.
+                  Dolor esse enim laborum pariatur cupidatat mollit anim. Do nulla fugiat esse
+                  dolore enim reprehenderit cillum magna sunt voluptate non aliqua enim amet. Esse
+                  aliquip excepteur ullamco est ut eu cupidatat.
                 </p>
               </div>
               <div class="text-center mt-4">
-                <a class="btn btn-primary registerbutton" href="/register"
-                  >Create an account</a
-                >
+                <a class="btn btn-primary registerbutton" href="/register">Create an account</a>
               </div>
             </div>
           </div>
