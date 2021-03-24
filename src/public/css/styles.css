@@ -9,8 +9,7 @@ html.html100 {
 
 /* homepage waves/background */
 body#waves {
-  background-image: url("../img/undraw_true_friends_c94g.svg"),
-    url("../img/wave.svg");
+  background-image: url("../img/undraw_true_friends_c94g.svg"), url("../img/wave.svg");
   background-position: center left, bottom center;
   background-repeat: no-repeat, repeat-x;
   background-size: 50%, auto;
@@ -84,8 +83,7 @@ button.btn.btn-primary.w-100.registerButton:hover {
 
 /* login */
 body#loginWaves {
-  background-image: url("../img/undraw_true_friends_c94g.svg"),
-    url("../img/wave.svg");
+  background-image: url("../img/undraw_true_friends_c94g.svg"), url("../img/wave.svg");
   background-position: left, bottom center;
   background-repeat: no-repeat, repeat-x;
   background-size: 40%, auto;
@@ -123,15 +121,13 @@ body#loginWaves {
 }
 
 body#registerWaves {
-  background-image: url("../img/undraw_true_friends_c94g.svg"),
-    url("../img/wave.svg");
+  background-image: url("../img/undraw_true_friends_c94g.svg"), url("../img/wave.svg");
   background-position: left, bottom center;
   background-repeat: no-repeat, repeat-x;
   background-size: 40%, auto;
 }
 
-/* alertArea Navbar */
-
+/* popup Navbar */
 .alertPopup {
   position: absolute;
   top: -9999px;
@@ -143,6 +139,7 @@ body#registerWaves {
   display: flex;
   align-items: center;
   justify-content: center;
+  color: white;
 }
 
 .alertPopup::before {
