@@ -5,9 +5,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Profile</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+      crossorigin="anonymous"
+    />
   </head>
-  <body>
-    <h1>if you can see this,</h1>
+  <body class="text-center">
+    <h1 class="mt-2">if you can see this,</h1>
     <p>it means you're logged in, a cookie was set in your browser.</p>
+    <p>or not yet, but i needed to type something here</p>
+    <div class="row justify-content-center">
+      <div class="col-8">
+        <div class="mt-2">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Age</th>
+                <th scope="col">Gender</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row"><%= userid %></th>
+                <td><%= firstName %></td>
+                <td><%= email %></td>
+                <td><%= age %></td>
+                <td><%= gender %></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <a class="btn btn-danger" href="/">HOME</a>
+      </div>
+    </div>
   </body>
 </html>

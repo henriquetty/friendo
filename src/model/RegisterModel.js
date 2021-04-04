@@ -2,36 +2,44 @@ const mysql = require("mysql");
 const connectionConfig = require("../database/dbConnection");
 
 class RegisterModel {
-  static verifyEmailAvailable(email, callback) {
-    let connection = mysql.createConnection(connectionConfig);
+    static verifyEmailAvailable(email) {
+        let connection = mysql.createConnection(connectionConfig);
 
-    let sql = `SELECT email FROM user_account WHERE email = '${email}';`;
+        let sql = `SELECT email FROM user_account WHERE email = '${email}';`;
 
-    connection.query(sql, (error, results, fields) => {
-      callback(results);
-    });
+        return new Promise((resolve, reject) => {
+            connection.query(sql, (error, results) => {
+                if (error) return reject(error);
 
-    connection.end();
-  }
+                if (results.length === 0) {
+                    //email is not registered yet
+                    resolve(false);
+                } else {
+                    //email was found in the DB.
+                    resolve(true);
+                }
+            });
+            connection.end();
+        });
+    }
 
-  static register(data, callback) {
-    let connection = mysql.createConnection(connectionConfig);
+    static register(data) {
+        let connection = mysql.createConnection(connectionConfig);
 
-    const { fname, lname, email, password, rpassword, birthdate, gender } = data;
+        const { fname, lname, email, password, birthdate, gender } = data;
 
-    let sql = `INSERT INTO user_account (first_name, last_name, email, password, age, gender)
+        let sql = `INSERT INTO user_account (first_name, last_name, email, password, age, gender)
     VALUES ('${fname}', '${lname}', '${email}', '${password}', '${birthdate}', '${gender}')`;
 
-    connection.query(sql, (error, results, fields) => {
-      if (error) {
-        return callback(error, null, null);
-      }
+        return new Promise((resolve, reject) => {
+            connection.query(sql, (error, results) => {
+                if (error) return reject(error);
 
-      callback(null, results, fields);
-    });
-
-    connection.end();
-  }
+                resolve(results);
+            });
+            connection.end();
+        });
+    }
 }
 
 module.exports = RegisterModel;

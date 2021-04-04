@@ -50,6 +50,11 @@
       </nav>
     </header>
     <main>
+      <% var messages = getMessages() %> <% if (messages.invalidlogin) { %>
+      <div class="alert alert-danger text-center"><%= messages.invalidlogin %></div>
+      <% } else if (messages.regSuccess) { %>
+      <div class="alert alert-success text-center"><%= messages.regSuccess %></div>
+      <% } %>
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-10 col-sm-9 col-md-8 col-lg-4 col-xxl-5">
@@ -73,7 +78,6 @@
                   name="password"
                   id="password"
                   placeholder="password"
-                  minlength="8"
                   required
                 />
               </div>
