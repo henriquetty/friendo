@@ -4,15 +4,28 @@ const email = document.querySelector("#email");
 const password = document.querySelector("#password");
 const rPassword = document.querySelector("#rpassword");
 const birthdate = document.querySelector("#birthdate");
+
 const regButton = document.querySelector("#registerWaves > main > div > div > div > form > button");
 
-regButton.addEventListener("click", function (e) {
-    let items = [fname, lname, email, password, rPassword, birthdate];
+const elements = [fname, lname, email, password, rPassword, birthdate];
 
+fname.addEventListener("blur", (e) => {
+    fname.value = fname.value.trim();
+});
+
+lname.addEventListener("blur", (e) => {
+    lname.value = lname.value.trim();
+});
+
+email.addEventListener("blur", (e) => {
+    email.value = email.value.trim();
+});
+
+regButton.addEventListener("click", function (e) {
     if (password.value !== rPassword.value) {
+        e.preventDefault();
         password.value = "";
         rPassword.value = "";
-        e.preventDefault();
         alert("Password must match");
         return;
     }
@@ -23,3 +36,18 @@ regButton.addEventListener("click", function (e) {
         return;
     }
 });
+
+setInterval(() => {
+    if (
+        !fname.value.trim() ||
+        !lname.value.trim() ||
+        !email.value.trim() ||
+        !password.value.trim() ||
+        !rPassword.value.trim() ||
+        !birthdate.value.trim()
+    ) {
+        regButton.classList.add("disabled");
+    } else {
+        regButton.classList.remove("disabled");
+    }
+}, 500);
