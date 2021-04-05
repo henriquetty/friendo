@@ -1,10 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,500;1,500&display=swap");
+
 body {
     background: #dce1e3;
+    font-family: "Roboto", sans-serif;
 }
 
 html.html100 {
     min-height: 100%;
     width: 100%;
+}
+
+:root {
+    --bluecolor: #5ebbf3;
+}
+
+.fontClassMedium {
+    font-weight: 500;
+}
+
+.fontClassMediumItalic {
+    font-weight: 500;
+    font-style: italic;
 }
 
 /* homepage waves/background */
@@ -18,7 +34,7 @@ body#waves {
 /* css override login form */
 
 ul.dropdown-menu.show {
-    border: 1px solid #5ebbf3;
+    border: 1px solid var(--bluecolor);
     width: 330px;
     left: -240px;
 }
@@ -35,7 +51,7 @@ ul.dropdown-menu.show {
 
 /* website buttons */
 button.btn.btn-primary.loginPopupButton {
-    background-color: #5ebbf3;
+    background-color: var(--bluecolor);
     border: none;
     border-radius: 13px;
     width: 36%;
@@ -45,7 +61,7 @@ button.btn.btn-primary.loginPopupButton {
 
 a.btn.btn-primary.registerbutton,
 button.btn.btn-primary.w-100.registerButton {
-    background-color: #5ebbf3;
+    background-color: var(--bluecolor);
     border: none;
     border-radius: 13px;
     padding: 9px;
@@ -135,7 +151,7 @@ body#registerWaves {
     visibility: hidden;
     width: 200px;
     height: 45px;
-    background-color: #5ebbf3;
+    background-color: var(--bluecolor);
     display: flex;
     align-items: center;
     justify-content: center;
