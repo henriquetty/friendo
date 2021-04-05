@@ -12,7 +12,7 @@ module.exports = {
         if (!validationErrors.isEmpty()) {
             const objectOfErrors = validationErrors.errors;
 
-            if (objectOfErrors.length > 1 && objectOfErrors.length <= 4) {
+            if (objectOfErrors.length > 1) {
                 const listOfErrors = objectOfErrors.map((value) => value.param);
 
                 let listOfErrorsMessage = "";
