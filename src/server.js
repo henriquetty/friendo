@@ -2,7 +2,9 @@ require("dotenv").config();
 
 const path = require("path");
 const express = require("express");
-const routes = require("./routes");
+const routes = require("./routes/routes");
+const profileRoutes = require("./routes/profileRoutes");
+
 const session = require("express-session");
 const flash = require("express-flash-messages");
 
@@ -16,11 +18,11 @@ app.set("views", path.join(__dirname, "/views"));
 app.use(
     session({
         name: "friendo",
-        secret: process.env.SECRET,
         resave: false,
         saveUninitialized: false,
+        secret: process.env.SECRET,
         cookie: {
-            maxAge: 28800000,
+            maxAge: 60000 * 3,
         },
     })
 );
@@ -28,6 +30,7 @@ app.use(
 app.use(flash());
 
 app.use("/", routes);
+app.use("/api", profileRoutes);
 
 app.listen(process.env.PORT || 3333, () => {
     console.log(`Listening on ${process.env.PORT || 3333}`);

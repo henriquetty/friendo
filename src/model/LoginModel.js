@@ -1,4 +1,5 @@
 const mysql = require("mysql");
+
 const connectionConfig = require("../database/dbConnection");
 
 class LoginModel {
@@ -9,15 +10,12 @@ class LoginModel {
 
         return new Promise((resolve, reject) => {
             connection.query(sql, (error, results) => {
-                if (error) return reject(error);
+                if (error) return reject(error); //handled by catch
 
-                if (results.length === 0) {
+                if (results.length) {
+                    resolve({ userID: results[0].userid });
+                } else {
                     resolve(null);
-                } else if (
-                    results[0].email === data.email &&
-                    results[0].password === data.password
-                ) {
-                    resolve([true, { userid: results[0].userid }]);
                 }
             });
             connection.end();

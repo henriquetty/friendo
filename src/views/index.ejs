@@ -11,6 +11,7 @@
             crossorigin="anonymous"
         />
         <link rel="stylesheet" href="css/styles.css" />
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     </head>
     <body id="waves">
         <header>
@@ -120,21 +121,20 @@
                     <div
                         class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 d-flex justify-content-center justify-content-sm-end justify-content-md-end"
                     >
-                        <div class="pt-5 w-50">
+                        <div class="pt-5 w-50" data-aos="fade-left">
                             <h1 class="text-center">
                                 Welcome to,
                                 <span class="d-block pt-2 text-success"
                                     >Friendo<span class="text-dark">.</span></span
                                 >
                             </h1>
-                            <div class="text-center">
+                            <div class="text-center mt-3">
                                 <p class="text-dark text-break text-wrap">
-                                    Chat. Find people similar to you. Exciting, right? <br />
+                                    Chat. Find people similar to you. <br />
                                     <span class="fontClassMediumItalic">Friendo</span> is an online
                                     community where people can make new
                                     <span class="fontClassMediumItalic">Friendos</span>. With a wide
-                                    range of filters, so you can find a perfect match. Join us right
-                                    now!
+                                    range of filters for you to find a perfect match.
                                 </p>
                             </div>
                             <div class="mt-4 d-flex flex-sm-row justify-content-center flex-column">
@@ -163,5 +163,9 @@
             crossorigin="anonymous"
         ></script>
         <script src="javascript/index.js"></script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
     </body>
 </html>

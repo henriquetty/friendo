@@ -14,7 +14,8 @@ module.exports = {
             }
 
             //set cookies and session
-            res.redirect(`/profile?userid=${userExists[1].userid}`);
+            req.session.userID = userExists.userID;
+            res.redirect("/profile");
         } catch (error) {
             console.log(error);
             res.redirect("/login?success=false&code=genericerror");
