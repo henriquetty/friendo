@@ -11,66 +11,44 @@
             crossorigin="anonymous"
         />
         <link rel="stylesheet" href="css/styles.css" />
+        <link rel="stylesheet" href="css/sidebar.css" />
     </head>
     <body>
-        <header>
-            <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-                <div class="container">
-                    <a class="navbar-brand" href="/">Friendo</a>
-                    <button
-                        class="navbar-toggler"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent"
-                        aria-controls="navbarSupportedContent"
-                        aria-expanded="false"
-                        aria-label="Toggle navigation"
-                    >
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="/">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/search">Search</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" href="/profile">Profile</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link disabled" href="#">Contact</a>
-                            </li>
-                        </ul>
+        <main>
+            <header class="d-block d-sm-none">
+                <nav class="navbar navbar-dark bg-dark">
+                    <div class="container">
+                        <button class="me-auto navbar-toggler d-block d-sm-none" type="button">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="me-auto d-none d-sm-block"></div>
+                        <a href="#" class="navbar-brand">Friendo</a>
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link" href="/logout">Logout</a>
+                                <a class="nav-link" aria-current="page" href="#">Logoff</a>
                             </li>
                         </ul>
                     </div>
-                </div>
-            </nav>
-        </header>
-        <main>
-            <div class="container">
+                </nav>
+            </header>
+            <div class="container-fluid">
                 <div class="row">
-                    <div class="col-6">
-                        <p>Hello you can stay in this page for 120 seconds</p>
+                    <div id="sidebar" class="col-2 d-none d-sm-block">
+                        <ul>
+                            <li><a href="">HOME</a></li>
+                            <li><a href="">SEARCH</a></li>
+                            <li><a href="">CONTACT</a></li>
+                        </ul>
                     </div>
-                    <div class="col-6">
-                        <form action="/api/updateProfile" method="POST">
-                            <div class="mb-3">
-                                <select name="mbti" id="">
-                                    <option value="infp">INFP</option>
-                                    <option value="INTJ">INTJ</option>
-                                    <option value="ISFP">ISFP</option>
-                                    <option value="INTP">INTP</option>
-                                    <option value="istp">ISTP</option>
-                                </select>
-                            </div>
-                            <button type="submit" class="btn btn-primary">Submit</button>
-                        </form>
+                    <div class="col-10">
+                        <h1 class="text-center text-danger mt-2">Hello bootstrap</h1>
+                        <p class="text-center mt-1">
+                            Dolore sit pariatur proident pariatur dolor dolore voluptate voluptate
+                            sunt aliquip do officia. Excepteur nisi ut pariatur non fugiat officia.
+                            Excepteur sit do tempor ullamco dolor exercitation aliquip qui ex quis
+                            do pariatur mollit dolor. Eu do magna commodo fugiat sint officia
+                            proident occaecat ea ipsum amet veniam.
+                        </p>
                     </div>
                 </div>
             </div>

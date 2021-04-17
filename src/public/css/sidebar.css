@@ -1,0 +1,20 @@
+#sidebar {
+    border: 1px solid black;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    min-width: 10%;
+}
+
+#sidebar ul {
+    margin: 0;
+    padding: 0;
+}
+
+#sidebar li {
+    list-style-type: none;
+}
+
+#sidebar a {
+    text-decoration: none;
+}
