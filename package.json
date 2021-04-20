@@ -1,11 +1,16 @@
 {
     "name": "friendo",
-    "version": "1.0.0",
+    "version": "1.0.3",
     "main": "src/server.js",
+    "description": "Web App to make Friendos",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/henriquetty/friendo.git"
+    },
     "license": "MIT",
     "dependencies": {
         "axios": "^0.21.1",
-        "ejs": "^3.1.5",
+        "ejs": "^3.1.6",
         "express": "^4.17.1",
         "express-flash-messages": "^0.1.1",
         "express-session": "^1.17.1",
