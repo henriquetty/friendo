@@ -22,15 +22,15 @@ app.use(
         saveUninitialized: false,
         secret: process.env.SECRET,
         cookie: {
-            maxAge: 60000 * 3,
+            maxAge: 60000 * 3, //3 minutes
         },
     })
 );
 
 app.use(flash());
 
-app.use("/", routes);
-app.use("/api", profileRoutes);
+app.use("/", routes); //static routes
+app.use("/api", profileRoutes); //api
 
 app.listen(process.env.PORT || 3333, () => {
     console.log(`Listening on ${process.env.PORT || 3333}`);
