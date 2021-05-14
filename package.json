@@ -3,10 +3,7 @@
     "version": "1.0.3",
     "main": "src/server.js",
     "description": "Web App to make Friendos",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/henriquetty/friendo.git"
-    },
+    "repository": "https://github.com/henriquetty/friendo.git",
     "license": "MIT",
     "dependencies": {
         "axios": "^0.21.1",
@@ -22,7 +19,8 @@
         "start": "node ."
     },
     "devDependencies": {
-        "nodemon": "^2.0.7",
-        "dotenv": "^8.2.0"
-    }
+        "dotenv": "^8.2.0",
+        "nodemon": "^2.0.7"
+    },
+    "author": "henriquetty <gamercaipira@gmail.com>"
 }
