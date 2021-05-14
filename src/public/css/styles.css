@@ -32,7 +32,6 @@ body#waves {
 }
 
 /* css override login form */
-
 ul.dropdown-menu.show {
     border: 1px solid var(--bluecolor);
     width: 330px;

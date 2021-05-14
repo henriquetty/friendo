@@ -1,20 +1,25 @@
 #sidebar {
-    border: 1px solid black;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-    min-width: 10%;
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    background-color: #212529;
+    border: 0px 1px 1px 1px solid white;
+    z-index: 1;
+    color: white;
 }
 
 #sidebar ul {
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
 }
 
-#sidebar li {
+#sidebar ul li {
     list-style-type: none;
 }
 
-#sidebar a {
+a {
     text-decoration: none;
+    color: white;
 }
+
+/*d-sm-none*/
