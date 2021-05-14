@@ -1,10 +1,10 @@
 {
     "name": "friendo",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "main": "src/server.js",
     "description": "Web App to make Friendos",
     "repository": "https://github.com/henriquetty/friendo.git",
-    "license": "MIT",
+    "license": "GNU GPLv3",
     "dependencies": {
         "axios": "^0.21.1",
         "ejs": "^3.1.6",
