@@ -12,10 +12,13 @@ const checkAuthentication = require("../middlewares/checkAuthentication");
 
 router.get("/", indexController.render);
 router.get("/search", checkAuthentication, searchController.render);
+
 router.get("/register", registerController.render);
 router.post("/register", registerValidation.register, registerController.register);
+
 router.get("/login", loginController.render);
 router.post("/login", loginController.login);
+
 router.get("/profile", checkAuthentication, profileController.render);
 
 module.exports = router;
