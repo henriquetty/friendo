@@ -1,5 +1,7 @@
+const render = (req, res) => {
+    res.render("index");
+}
+
 module.exports = {
-    render: function (req, res) {
-        res.render("index");
-    },
-};
+    render
+}

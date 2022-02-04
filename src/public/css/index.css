@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,500;1,500&display=swap");
+:root {
+    --bluecolor: #5ebbf3;
+}
+
+html  {
+    min-height: 100%;
+    width: 100%;
+}
+
+body {
+    background: #dce1e3;
+    font-family: "Roboto", sans-serif;
+    background-image: url("../img/undraw_true_friends_c94g.svg"), url("../img/wave.svg");
+    background-position: center left, bottom center;
+    background-repeat: no-repeat, repeat-x;
+    background-size: 50%, auto;
+}
+
+
+.fontClassMedium {
+    font-weight: 500;
+}
+
+.fontClassMediumItalic {
+    font-weight: 500;
+    font-style: italic;
+}
+
+/* login pop up */
+ul.dropdown-menu.show {
+    border: 1px solid var(--bluecolor);
+    width: 330px;
+    left: -240px;
+}
+
+#dropdownEmail,
+#dropdownPassword {
+    box-shadow: 1px 1px 3px 1px rgb(179, 174, 174);
+}
+
+#dropdownEmail:focus,
+#dropdownPassword:focus {
+    box-shadow: 2px 3px 6px 1px rgb(179, 174, 174);
+}
+
+/* buttons */
+/* login */
+button.btn.btn-primary.loginPopupButton {
+    background-color: var(--bluecolor);
+    border: none;
+    border-radius: 13px;
+    width: 36%;
+    padding: 9px;
+    box-shadow: 2px 3px 8px 1px rgb(179, 174, 174);
+}
+
+/* register and login */
+a.btn.btn-primary.centralButtons {
+    background-color: var(--bluecolor);
+    border: none;
+    border-radius: 13px;
+    padding: 9px;
+    box-shadow: 2px 3px 8px 1px rgb(179, 174, 174);
+}
+
+a.btn.btn-primary.centralButtons:hover {
+    box-shadow: 2px 6px 10px 1px rgb(179, 174, 174);
+}
+
+/* navbar hover search */
+.alertPopup {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+    visibility: hidden;
+    width: 200px;
+    height: 45px;
+    background-color: var(--bluecolor);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.alertPopup::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    margin-left: -10px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #dc3545 transparent;
+}
+
+
+/* media queries */
+@media (max-width: 991.98px) {
+    body {
+        background-size: 60%, 140%;
+    }
+}
+
+@media (max-width: 767.98px) {
+    body {
+        background-size: 70%, 180%;
+    }
+}
+
+@media (max-width: 575.98px) {
+    body{
+        background-position: center bottom, bottom;
+        background-size: 90%, 200%;
+    }
+
+    div.pt-5.w-50 {
+        width: 75% !important;
+    }
+}

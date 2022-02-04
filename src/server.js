@@ -3,7 +3,6 @@ require("dotenv").config();
 const path = require("path");
 const express = require("express");
 const routes = require("./routes/routes");
-const profileRoutes = require("./routes/profileRoutes");
 
 const session = require("express-session");
 const flash = require("express-flash-messages");
@@ -28,10 +27,9 @@ app.use(
 );
 
 app.use(flash());
-
 app.use("/", routes); //static routes
-app.use("/api", profileRoutes); //api
 
-app.listen(process.env.PORT || 3333, () => {
-    console.log(`Listening on ${process.env.PORT || 3333}`);
+const port = process.env.PORT || 3333;
+app.listen(port, () => {
+    console.log(`Listening on ${port}`);
 });

@@ -1,5 +1,7 @@
+const render = (req, res) => {
+    res.render("profile");
+}
+
 module.exports = {
-    render: function (req, res) {
-        res.render("profile");
-    },
-};
+    render
+}
