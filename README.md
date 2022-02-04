@@ -33,6 +33,13 @@ Linux e macOS:
 2. Entre na pasta criada com `$ cd friendo`
 3. Agora vamos fazer a instalação do projeto `$ npm install`
 
+## 🔧 Configurando
+O primeiro passo para configurar o projeto em seu ambiente local é criar uma database.
+Logo após isso renomeie o arquivo *.env.example* para somente *.env* e configure o mesmo com os detalhes de seu banco de dados. </br>
+Execute o comando `$ npm run create:table` para automatizar a criação da tabela em sua database que foi previamente configurada.
+
+## ⚙ Executando
+Para botar o projeto no ar é muito fácil, simplesmnente execute `$ npm run dev` e navegue para [localhost:8080](http://localhost:8080) (ou a porta configurada).
 ## 📝 Licença
 
 Esse projeto está sob licença. Veja o arquivo [LICENÇA](LICENSE) para mais detalhes.
