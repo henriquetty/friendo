@@ -4,6 +4,8 @@
 ![GitHub language count](https://img.shields.io/github/languages/count/henriquetty/friendo?style=for-the-badge)
 ![GitHub forks](https://img.shields.io/github/forks/henriquetty/friendo?style=for-the-badge)
 
+# Read me in English 🇬🇧 [Click here](READMEEN.md)
+
 <img src="https://i.imgur.com/oQlhRTn.png" alt="exemplo imagem">
 
 > Aplicação feita utilizando Node, Express, EJS, MariaDB e Sequelize com o propósito de ser uma mini rede social para fazer amigos.
