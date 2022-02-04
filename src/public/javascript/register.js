@@ -5,7 +5,7 @@ const password = document.querySelector("#password");
 const rPassword = document.querySelector("#rpassword");
 const birthdate = document.querySelector("#birthdate");
 
-const regButton = document.querySelector("#registerWaves > main > div > div > div > form > button");
+const regButton = document.getElementById("regbutton");
 
 const elements = [fname, lname, email, password, rPassword, birthdate];
 

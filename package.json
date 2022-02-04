@@ -16,7 +16,8 @@
     },
     "scripts": {
         "dev": "nodemon .",
-        "start": "node ."
+        "start": "node .",
+        "create:table": "node ./src/utils/createTable.js"
     },
     "devDependencies": {
         "dotenv": "^8.2.0",

@@ -11,9 +11,11 @@ router.get("/", indexController.render);
 
 //login
 router.get("/login", loginController.render);
+router.post("/login", loginController.login);
 
 //register
 router.get("/register", registerController.render);
+router.post("/register", registerController.register);
 
 //profile
 router.get("/profile", profileController.render);
