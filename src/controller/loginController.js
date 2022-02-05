@@ -7,15 +7,27 @@ const render = (req, res) => {
 const login = async (req, res) => {
     const { email, password } = req.body;
 
-    const result = await UserModel.findOne({
+    const userExists = await UserModel.findOne({
         where: {
             email,
         }
     });
 
-    console.log(result);
+    if (!userExists) {
+        return res.redirect("/");
+    }
+
+    req.session.userID = userExists.id;
+
+    return res.redirect(`/profile?id=${userExists.id}`);
+}
+
+const logout = (req, res) => {
+    req.session.destroy();
+    
+    return res.redirect("/");
 }
 
 module.exports = {
-    render, login
+    render, login, logout
 }

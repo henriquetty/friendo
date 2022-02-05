@@ -21,13 +21,13 @@ app.use(
         saveUninitialized: false,
         secret: process.env.SECRET,
         cookie: {
-            maxAge: 60000 * 3, //3 minutes
+            maxAge: 60000 * 5, //5 minutes
         },
     })
 );
 
 app.use(flash());
-app.use("/", routes); //static routes
+app.use("/", routes);
 
 const port = process.env.PORT || 3333;
 app.listen(port, () => {
