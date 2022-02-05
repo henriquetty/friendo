@@ -28,11 +28,12 @@ ul, li {
     margin: 0;
 }
 
-
 #container {
-    width: 870px;
+    max-width: 870px;
     margin: 0 auto;
+    margin-bottom: 15px;
     background-color: white;
+    margin-top: 15px;
 }
 
 /* profile */
@@ -43,15 +44,16 @@ ul, li {
 }
 
 /* profile intro */
-
 #profile-intro {
+    overflow-wrap: break-word;
+    margin-bottom: 20px;
     display: flex;
     flex-direction: row;
-    margin-bottom: 20px;
+    justify-content: space-between;
 }
 
-#basic-info {
-    text-align: center;
+#basic-info > img {
+    text-align: left;
 }
 
 #name {
@@ -63,7 +65,7 @@ ul, li {
 }
 
 #online-status {
-    text-align: center;
+    text-align: left;
     font-size: 0.8em;
     font-style: italic;
 }
@@ -79,6 +81,10 @@ ul, li {
 
 #profile-actions {
     margin-left: 30px;
+}
+
+#profile-actions ul {
+    text-align: center;
 }
 
 #profile-options li {
