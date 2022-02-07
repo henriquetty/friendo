@@ -1,3 +1,3 @@
-const RegisterModel = require("../model/RegisterModel");
+const UserModel = require("../model/UserModel");
 
-RegisterModel.sync();
+UserModel.sync();

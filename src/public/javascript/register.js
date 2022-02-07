@@ -7,14 +7,10 @@ const birthdate = document.querySelector("#birthdate");
 
 const regButton = document.getElementById("regbutton");
 
-const elements = [fname, lname, email, password, rPassword, birthdate];
+const elements = [fname, email, password, rPassword];
 
 fname.addEventListener("blur", (e) => {
     fname.value = fname.value.trim();
-});
-
-lname.addEventListener("blur", (e) => {
-    lname.value = lname.value.trim();
 });
 
 email.addEventListener("blur", (e) => {
@@ -40,11 +36,9 @@ regButton.addEventListener("click", function (e) {
 setInterval(() => {
     if (
         !fname.value.trim() ||
-        !lname.value.trim() ||
         !email.value.trim() ||
         !password.value.trim() ||
-        !rPassword.value.trim() ||
-        !birthdate.value.trim()
+        !rPassword.value.trim()
     ) {
         regButton.classList.add("disabled");
     } else {
