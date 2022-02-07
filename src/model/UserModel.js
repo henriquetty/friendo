@@ -11,10 +11,6 @@ const User = sequelize.define("UserAccount", {
         type: DataTypes.CHAR(30),
         allowNull: false,
     },
-    lastName: {
-        type: DataTypes.CHAR,
-        allowNull: false,
-    },
     email: {
         type: DataTypes.CHAR,
         allowNull: false
@@ -27,7 +23,6 @@ const User = sequelize.define("UserAccount", {
         type: DataTypes.INTEGER(1),
         allowNull: false
     }
-
 });
 
 module.exports = User;
