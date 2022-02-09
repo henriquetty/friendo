@@ -1,7 +1,7 @@
 const UserModel = require("../model/UserModel");
 
 const render = async (req, res) => {
-    const profileID = req.query.id;
+    const profileID = req.params.id;
 
     const user = await UserModel.findOne({
         where: {
@@ -10,12 +10,14 @@ const render = async (req, res) => {
     });
 
     if (!user) {
-        return res.redirect("/");
+        return res.redirect("/?error=notFound");
     }
     
+    let isProfileOwner = req.session.userID == req.params.id ? true : false;
+    
     return res.render("profile", {
+        isProfileOwner,
         firstName: user.firstName,
-        lastName: user.lastName,
         email: user.email,
         gender: user.gender,
     });
@@ -24,3 +26,4 @@ const render = async (req, res) => {
 module.exports = {
     render
 }
+    

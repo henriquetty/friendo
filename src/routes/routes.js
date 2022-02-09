@@ -21,6 +21,6 @@ router.get("/register", registerController.render);
 router.post("/register", registerController.register);
 
 //profile
-router.get("/profile", profileController.render);
+router.get("/profile/:id", authCheck, profileController.render);
 
 module.exports = router;

@@ -6,8 +6,7 @@ const render = (req, res) => {
 
 const register = async (req, res) => {
     const { firstName, lastName, email, password, gender, birthdate } = req.body;
-    req.session.firstName = firstName;
-
+    
     const userExists = await UserModel.findOne({
         where: {
             email,
@@ -15,7 +14,7 @@ const register = async (req, res) => {
     });
     
     if (userExists) {
-        return res.redirect("/");
+        return res.redirect("/?error=emailTaken");
     }
 
     await UserModel.create({

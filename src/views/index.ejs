@@ -24,7 +24,7 @@
                             <a class="nav-link active" aria-current="page" href="/">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link disabled" href="/search">Search</a>
+                            <a class="nav-link <%= isLoggedIn == true ? "" : "disabled" %>" href="/search">Search</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link disabled" href="#">Contact</a>
@@ -37,35 +37,41 @@
                         <li class="nav-item d-sm-none">
                             <a href="/login" class="nav-link">Login</a>
                         </li>
-                        <li class="nav-item dropdown d-none d-sm-block">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">Login</a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <form class="px-3 py-3" action="/login" method="POST">
-                                        <div class="mb-3 text-center">
-                                            <label for="dropdownEmail" class="form-label">Email address</label>
-                                            <input type="email" class="form-control rounded-pill" id="dropdownEmail"
-                                                name="email" required placeholder="email@example.com" />
-                                        </div>
-                                        <div class="mb-3 text-center">
-                                            <label for="dropdownPassword" class="form-label">Password</label>
-                                            <input type="password" class="form-control rounded-pill"
-                                                id="dropdownPassword" name="password" required placeholder="password" />
-                                        </div>
-                                        <div class="d-flex justify-content-center mb-3">
-                                            <button type="submit" class="btn btn-primary loginPopupButton">
-                                                Log in
-                                            </button>
-                                        </div>
-                                        <div class="text-center">
-                                            <span class="mb-1 d-block text-break">Don't have an account?</span>
-                                            <a class="" href="/register">You can sign up instead</a>
-                                        </div>
-                                    </form>
-                                </li>
-                            </ul>
-                        </li>
+                        <% if(!isLoggedIn) { %>
+                            <li class="nav-item dropdown d-none d-sm-block">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">Login</a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <form class="px-3 py-3" action="/login" method="POST">
+                                            <div class="mb-3 text-center">
+                                                <label for="dropdownEmail" class="form-label">Email address</label>
+                                                <input type="email" class="form-control rounded-pill" id="dropdownEmail"
+                                                    name="email" required placeholder="email@example.com" />
+                                            </div>
+                                            <div class="mb-3 text-center">
+                                                <label for="dropdownPassword" class="form-label">Password</label>
+                                                <input type="password" class="form-control rounded-pill"
+                                                    id="dropdownPassword" name="password" required placeholder="password" />
+                                            </div>
+                                            <div class="d-flex justify-content-center mb-3">
+                                                <button type="submit" class="btn btn-primary loginPopupButton">
+                                                    Log in
+                                                </button>
+                                            </div>
+                                            <div class="text-center">
+                                                <span class="mb-1 d-block text-break">Don't have an account?</span>
+                                                <a class="" href="/register">You can sign up instead</a>
+                                            </div>
+                                        </form>
+                                    </li>
+                                </ul>
+                            </li>
+                        <% } else { %>
+                            <li class="nav-item">
+                                <a href="/profile/<%= userID %>" class="nav-link">My Profile</a>
+                            </li>
+                        <% } %>
                     </ul>
                 </div>
             </div>

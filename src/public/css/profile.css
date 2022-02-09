@@ -29,11 +29,11 @@ ul, li {
 }
 
 #container {
-    max-width: 870px;
+    max-width: 992px;
     margin: 0 auto;
+    margin-top: 15px;
     margin-bottom: 15px;
     background-color: white;
-    margin-top: 15px;
 }
 
 /* profile */
@@ -95,6 +95,7 @@ ul, li {
 
 #friendship-buttons {
     margin-top: 20px;
+    width: 200px;
 }
 
 .btnfriendship {
@@ -170,4 +171,45 @@ article {
 
 .mainLikes > i {
     color: red;
+}
+
+
+/* media queries */
+
+@media only screen and (max-width: 992px) {
+    #container {
+        max-width: 768px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #container {
+        max-width: 576px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    #container {
+        max-width: 330px;
+    }
+
+    #profile {
+        flex-direction: column;
+    }
+
+    #profile-intro {
+        flex-direction: column;
+    }
+
+    #basic-info {
+        text-align: center;
+    }
+
+    #profile-actions {
+        margin-left: 0px;
+    }
+
+    #friendship-buttons {
+        width: 100%;
+    }
 }

@@ -7,19 +7,16 @@ const render = (req, res) => {
 const login = async (req, res) => {
     const { email, password } = req.body;
 
-    const userExists = await UserModel.findOne({
-        where: {
-            email,
-        }
+    const user = await UserModel.findOne({
+        where: { email }
     });
 
-    if (!userExists) {
-        return res.redirect("/");
+    if (user && user.email == email && user.password == password) {
+        req.session.userID = user.id;
+        return res.redirect(`/profile/${user.id}`);
     }
 
-    req.session.userID = userExists.id;
-
-    return res.redirect(`/profile?id=${userExists.id}`);
+    return res.redirect("/?error=notFound");
 }
 
 const logout = (req, res) => {
