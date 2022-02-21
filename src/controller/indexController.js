@@ -9,8 +9,8 @@ const render = (req, res) => {
 
     }
 
-    return res.render("index", {
-        userID: false,
+    res.render("index", {
+        userID: null,
         isLoggedIn: false
     });
     
