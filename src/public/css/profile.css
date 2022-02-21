@@ -56,6 +56,11 @@ ul, li {
     text-align: left;
 }
 
+.profile-picture {
+    max-width: 200px;
+    max-height: 200px;
+}
+
 #name {
     text-align: center;
     font-size: 1.3em;
@@ -65,18 +70,13 @@ ul, li {
 }
 
 #online-status {
-    text-align: left;
+    text-align: center;
     font-size: 0.8em;
     font-style: italic;
 }
 
 #status {
     color: green;
-}
-
-#mood {
-    text-align: left;
-    font-size: 1.3em;
 }
 
 #profile-actions {
@@ -176,25 +176,30 @@ article {
 
 /* media queries */
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 991px) {
     #container {
-        max-width: 768px;
+        width: 80%;
     }
 }
 
 @media only screen and (max-width: 768px) {
     #container {
-        max-width: 576px;
+        width: 80%;
     }
 }
 
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 610px) {
     #container {
-        max-width: 330px;
+        width: 80%;
     }
 
     #profile {
         flex-direction: column;
+    }
+
+    .profile-picture {
+        width: 100%;
+        height: auto;
     }
 
     #profile-intro {

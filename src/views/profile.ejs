@@ -43,10 +43,9 @@
         <div id="profile">
             <div id="profile-intro">
                 <div id="basic-info">
-                    <img src="https://images.unsplash.com/photo-1542909168-82c3e7fdca5c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80" width="200" height="200" id="pfp">
-                    <p id="name"><%= firstName %></p>
+                    <img class="profile-picture" src="/img/default-avatar.png" width="200" height="200">
+                    <p id="name"><%= firstName %> <span class="mood">☁️</span></p>
                     <p id="online-status">Currently <span id="status">Online</span></p>
-                    <p id="mood">My Current Mood: ☁️</p>
                 </div>
                 <div id="profile-actions">
                     <ul id="profile-options">
@@ -54,7 +53,7 @@
                         <li>Posts</li>
                     </ul>
                     <div id="friendship-buttons">
-                        <% if(isProfileOwner) { %>
+                        <% if (isProfileOwner) { %>
                             <button type="button" class="btnfriendship">Edit Profile</button>
                         <% } else { %>
                             <button type="button" class="btnfriendship">Add as Friend</button>
@@ -66,14 +65,14 @@
             <div id="profile-description" class="separator">
                 <div id="bio">
                     <p id="intro">About me:</p>
-                    <p id="bioBox">Hello I'm user.</p>
-                    <p id="age"><i class="fas fa-birthday-cake"></i> Age: 23</p>
+                    <p id="bioBox">N/A</p>
+                    <p id="age"><i class="fas fa-birthday-cake"></i> Age: N/A</p>
                     <p id="gender">
                         <i class="fas fa-venus-mars"></i>
                         Gender: <%= gender == 1 ? "Male 👨" : "Female 👩" %>
                     </p>
-                    <p id="mbti"><i class="fas fa-feather-alt"></i> MBTI: INTP-T</p>
-                    <p id="religion"><i class="fas fa-praying-hands"></i> Religion: Protestant</p>
+                    <p id="mbti"><i class="fas fa-feather-alt"></i> MBTI: N/A</p>
+                    <p id="religion"><i class="fas fa-praying-hands"></i> Religion: N/A</p>
                 </div>
             </div>
         </div>
@@ -92,16 +91,6 @@
                         </div>
                     </article>
                 </section>
-                <section class="post-wrapper">
-                    <article id="latest-pic">
-                        <p class="title">My second love</p>
-                        <p class="mainLikes"><i class="far fa-heart"></i> By 134 people</p>
-                        <button class="btnfriendship">READ</button>
-                        <div class="date">
-                            <p class="">12th December 2021</p>
-                        </div>
-                    </article>
-                </section>   
             </div>
         </div>
     </div>
